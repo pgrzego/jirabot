@@ -19,7 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => { res.send('\n Hello \n') })
 
-app.post('/', (req, res) => { res.send(JSON.stringify(req.body)) })
+app.post('/', (req, res) => { 
+  console.log(`Request received:\n`+JSON.stringify(req.body))
+  res.send('') 
+})
 
 app.listen(config('PORT'), (err) => {
   if (err) throw err
