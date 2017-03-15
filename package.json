@@ -1,0 +1,35 @@
+{
+  "name": "jirabot",
+  "description": "Jirabot is a bot that integrates Jira with Slack",
+  "version": "0.3.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src",
+    "notify": "node ./src/tasks/notify",
+    "test": "standard"
+  },
+  "author": {
+    "email": "creager@heroku.com",
+    "name": "Piotr Grzegorzewski",
+    "url": "https://pgrzego.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/pgrzego"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "dotenv": "^2.0.0",
+    "express": "^4.13.4",
+    "express-http-proxy": "^0.6.0"
+  },
+  "keywords": [
+    "slack",
+    "slack-bot",
+    "bot",
+    "jira"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "5.7.1"
+  }
+}
