@@ -1,7 +1,7 @@
 'use strict'
 
 const _ = require('lodash')
-const config = require('../config')
+const config = require('../src/config')
 const Botkit = require('botkit')
 
 class Notifier {
@@ -14,7 +14,7 @@ class Notifier {
 		}
 
 		this.controller = Botkit.slackbot({})
-		this.bot = controller.spawn()
+		this.bot = this.controller.spawn()
 
 		this.bot.configureIncomingWebhook({ url: config('WEBHOOK_URL') })
 	}
@@ -48,7 +48,7 @@ class Notifier {
             "pretext": "New comment on Jira",
             "author_name": request.comment.author.displayName,
             "author_link": request.comment.author.self,
-            "author_icon": request.comment.author.avatarUrls.48x48,
+            "author_icon": request.comment.author.avatarUrls["48x48"],
             "title": "Click to respond",
             "title_link": request.comment.self,
             "text": request.comment.body.substring(0,50),

@@ -5,7 +5,7 @@ const express = require('express')
 const proxy = require('express-http-proxy')
 const bodyParser = require('body-parser')
 const config = require('./config')
-const Notifier = require('tasks/notify.js')
+const Notifier = require('./../tasks/notify.js')
 
 let app = express()
 let notifier = new Notifier
