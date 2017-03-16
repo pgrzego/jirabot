@@ -9,7 +9,9 @@ if (ENV === 'development') dotenv.load()
 const config = {
   ENV: process.env.NODE_ENV,
   PORT: process.env.PORT,
-  PROXY_URI: process.env.PROXY_URI
+  PROXY_URI: process.env.PROXY_URI,
+  WEBHOOK_URL: process.env.WEBHOOK_URL,
+  ICON_EMOJI: ':bee:'
 }
 
 module.exports = (key) => {
