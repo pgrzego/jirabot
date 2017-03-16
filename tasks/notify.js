@@ -29,7 +29,7 @@ class Notifier {
 				console.log("Issue has been updated.")
 				break
 			default: 
-				console.log("Unknown webhook event ("+request.webhookEvent+").")
+				console.log("Unknown webhook event ("+JSON.stringify(request)+").")
 		}
 	}
 
