@@ -25,7 +25,7 @@ app.post('/', (req, res) => {
   //console.log(`Request received:\n`+JSON.stringify(req.body))
   console.log(`Request received`)
 
-  notifier.parseRequest(req)
+  notifier.parseRequest(req.body)
 
   res.send('') 
 })
