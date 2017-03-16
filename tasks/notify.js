@@ -42,6 +42,7 @@ class Notifier {
 	}
 
 	newComment(request) {
+		console.log(JSON.stringify(request))
 		this.postMsg([{
 			"fallback": "There is a new comment added by "+request.author.displayName,
             "color": "#205081",
