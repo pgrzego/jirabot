@@ -42,9 +42,8 @@ class Notifier {
 	}
 
 	newComment(request) {
-		console.log(JSON.stringify(request))
 		this.postMsg([{
-			"fallback": "There is a new comment added by "+request.author.displayName,
+			"fallback": "There is a new comment added by "+request.comment.author.displayName,
             "color": "#205081",
             "pretext": "New comment on Jira",
             "author_name": request.comment.author.displayName,
